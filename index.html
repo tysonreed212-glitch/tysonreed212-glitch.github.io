@@ -198,6 +198,21 @@
         outline: none;
       }
       .x-link:active { transform: translateY(-1px); }
+      .x-link--featured {
+        background: linear-gradient(180deg, #e8c95e, var(--x-gold));
+        border-color: var(--x-gold);
+        color: #141210;
+        box-shadow: 0 12px 32px -12px var(--x-gold-glow), 0 0 0 1px rgb(212 175 55 / 0.35);
+      }
+      .x-link--featured:hover, .x-link--featured:focus-visible, .x-link--featured:active {
+        background: linear-gradient(180deg, #f0d47c, #dcbd45);
+        border-color: #f0d47c;
+        box-shadow: 0 16px 36px -10px var(--x-gold-glow), 0 0 0 1px rgb(212 175 55 / 0.5), 0 0 32px -6px var(--x-gold-glow);
+      }
+      .x-link--featured .x-link__title { color: #141210; }
+      .x-link--featured .x-link__sub { color: rgb(20 18 16 / 0.72); }
+      .x-link--featured .x-ico { background: rgb(11 11 11 / 0.16); color: #141210; }
+      .x-link--featured .x-arrow { color: #141210; }
       .x-ico {
         flex: none;
         width: 44px; height: 44px;
@@ -302,6 +317,19 @@
         </div>
 
         <p class="x-type" aria-live="off"><span id="type">You're closer than you think.</span><span class="x-type__cur" aria-hidden="true"></span></p>
+
+        <section class="x-block" aria-labelledby="start">
+          <h2 class="x-label" id="start">Start here</h2>
+          <ul class="x-links">
+            <li class="x-in" style="--i: 0">
+              <a class="x-link x-link--featured" href="https://nclexcnanp.netlify.app" target="_blank" rel="noopener">
+                <span class="x-ico" aria-hidden="true"><span style="font-size: 22px; line-height: 1;">📚</span></span>
+                <span class="x-link__text"><span class="x-link__title">Practice questions &amp; study guides</span><span class="x-link__sub">NCLEX Prep Hub · nclexcnanp.netlify.app</span></span>
+                <svg class="x-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
+              </a>
+            </li>
+          </ul>
+        </section>
 
         <section class="x-block" aria-labelledby="follow">
           <h2 class="x-label" id="follow">Follow &amp; watch</h2>
