@@ -305,6 +305,96 @@
         .x-link, .x-arrow { transition: none; }
         .x-link:hover, .x-link:focus-visible, .x-link:active { transform: none; }
       }
+    
+/* free 20-question set */
+/* Hero CTA */
+      .x-cta {
+        display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+        min-height: var(--tap);
+        margin: 20px auto 0;
+        padding: 12px 22px;
+        border-radius: var(--r-pill);
+        background-color: var(--x-gold);
+        color: var(--x-bg);
+        font: var(--type-body-strong);
+        text-decoration: none;
+        box-shadow: 0 0 0 1px rgb(212 175 55 / 0.5), 0 10px 30px -8px var(--x-gold-glow);
+        transition: transform var(--dur-quick) var(--ease-out), box-shadow 260ms var(--ease-out);
+      }
+.x-cta:hover, .x-cta:focus-visible { transform: translateY(-2px); box-shadow: 0 0 0 2px var(--x-gold), 0 14px 34px -8px var(--x-gold-glow); outline: none; }
+.x-cta svg { width: 18px; height: 18px; }
+/* Free set */
+      .x-set__title {
+        font: 600 clamp(26px, 7vw, 30px)/1.15 var(--x-serif);
+        color: var(--x-ink);
+        text-align: center;
+        margin: 0;
+      }
+.x-set__title span { display: block; font-style: italic; font-weight: 500; color: var(--x-gold); font-size: 0.78em; margin-top: 4px; }
+.x-set__intro { font: var(--type-small); color: var(--x-ink-2); text-align: center; line-height: 1.5; margin: 10px auto 18px; max-width: 38ch; }
+.x-qs { display: grid; gap: 12px; }
+.x-q {
+        padding: 18px 16px 14px;
+        border-radius: var(--r-m);
+        background: linear-gradient(180deg, var(--x-surface-2), var(--x-surface));
+        border: 1px solid var(--x-gold-line);
+        scroll-margin-top: 16px;
+      }
+.x-q__prog { font: var(--type-tag); text-transform: uppercase; letter-spacing: 0.12em; color: var(--x-gold); margin: 0 0 6px; }
+.x-q h3 { font: 600 21px/1.2 var(--x-serif); color: var(--x-ink); margin: 0 0 10px; }
+.x-q p, .x-q li, .x-q td, .x-q th { font: var(--type-body); color: var(--x-ink); line-height: 1.5; }
+.x-q p { margin: 0 0 10px; }
+.x-q strong { color: var(--x-gold); font-weight: var(--weight-medium); }
+.x-q__case { padding: 10px 12px; border-radius: var(--r-s); background-color: #2a2416; border: 1px solid var(--x-gold-line); }
+.x-q__case p { margin: 0 0 6px; font: var(--type-small); line-height: 1.5; }
+.x-q__case p:last-child { margin: 0; }
+.x-q__sata { display: inline-block; font: var(--type-tag); text-transform: uppercase; letter-spacing: 0.1em; color: var(--x-gold); border: 1px solid var(--x-gold-line); border-radius: var(--r-pill); padding: 3px 10px; margin: 0 0 10px; }
+.x-opts { list-style: none; margin: 0 0 12px; padding: 0; display: grid; gap: 6px; }
+.x-opts li {
+        display: flex; gap: 10px; align-items: baseline;
+        padding: 9px 12px;
+        border-radius: var(--r-s);
+        border: 1px solid var(--stroke-secondary);
+        background: rgb(11 11 11 / 0.35);
+      }
+.x-opts b { flex: none; color: var(--x-gold); font-weight: var(--weight-medium); min-width: 1.2em; }
+.x-opts--col { margin-bottom: 10px; }
+.x-q__col { font: var(--type-tag) !important; text-transform: uppercase; letter-spacing: 0.1em; color: var(--x-ink-2) !important; margin: 4px 0 6px !important; }
+.x-matrix { width: 100%; border-collapse: collapse; margin: 0 0 12px; }
+.x-matrix th, .x-matrix td { border-bottom: 1px solid var(--stroke-secondary); padding: 8px 6px; text-align: left; vertical-align: top; }
+.x-matrix thead th { font: var(--type-tag) !important; text-transform: uppercase; letter-spacing: 0.08em; color: var(--x-gold) !important; }
+.x-matrix td:not(:first-child), .x-matrix thead th:not(:first-child) { text-align: center; width: 22%; color: var(--x-ink-2); }
+.x-reveal { border-top: 1px solid var(--stroke-secondary); margin-top: 4px; }
+.x-reveal summary {
+        list-style: none; cursor: pointer;
+        display: flex; align-items: center; justify-content: center; gap: 8px;
+        min-height: var(--tap);
+        margin-top: 10px;
+        border-radius: var(--r-pill);
+        border: 1px solid var(--x-gold);
+        color: var(--x-gold);
+        font: var(--type-label);
+        -webkit-tap-highlight-color: transparent;
+        transition: background 200ms var(--ease-out);
+      }
+.x-reveal summary::-webkit-details-marker { display: none; }
+.x-reveal summary:hover, .x-reveal summary:focus-visible { background-color: #2a2416; outline: none; }
+.x-reveal summary .x-hide, .x-reveal[open] summary .x-show { display: none; }
+.x-reveal[open] summary .x-hide { display: inline; }
+.x-ans { padding: 14px 2px 2px; animation: x-rise 400ms var(--ease-out); }
+.x-ans p { font: var(--type-small); line-height: 1.55; color: var(--x-ink-2); }
+.x-ans p b { display: block; font: var(--type-tag); text-transform: uppercase; letter-spacing: 0.12em; color: var(--x-gold); margin-bottom: 3px; }
+.x-ans .x-key { font: 600 20px/1.3 var(--x-serif); color: var(--x-ink); }
+.x-ans .x-tip { padding: 10px 12px; border-radius: var(--r-s); background-color: #2a2416; border: 1px solid var(--x-gold-line); color: var(--x-ink); margin: 0; }
+.x-set__fine { font: var(--type-caption); color: var(--x-ink-2); text-align: center; margin: 16px 0 0; }
+@media (prefers-reduced-motion: reduce) {
+        .x-hero img, .x-wave, .x-ecg svg, .x-type__cur { animation: none; }
+        .x-in { animation: none; opacity: 1; transform: none; }
+        .x-link, .x-arrow, .x-cta { transition: none; }
+        .x-ans { animation: none; }
+        .x-cta:hover, .x-cta:focus-visible { transform: none; }
+        .x-link:hover, .x-link:focus-visible, .x-link:active { transform: none; }
+      }
     </style>
   </head>
   <body>
@@ -318,6 +408,7 @@
             <h1 class="x-name">Reverend Tyson Reed <span class="x-wave" role="img" aria-label="waving hand">👋</span></h1>
             <p class="x-brand">NCLEX Prep Hub<span>Nursing &amp; Medical Exam Preparation</span></p>
             <p class="x-tag">Original NCLEX, CNA &amp; NP practice questions, NGN case studies and test-day tips, made to help you pass with confidence.</p>
+            <a class="x-cta" href="#free-set">Start the free 20-question set <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6"/></svg></a>
           </div>
         </header>
 
@@ -340,6 +431,443 @@
               </a>
             </li>
           </ul>
+        </section>
+
+        <section class="x-block" id="free-set" aria-labelledby="free-set-title">
+          <p class="x-label">Free practice set</p>
+          <h2 class="x-set__title" id="free-set-title">Free 20-Question NCLEX Set <span>with full rationales</span></h2>
+          <p class="x-set__intro">Original practice questions written to the 2026 NCLEX-RN test plan. Try each one before you reveal the answer.</p>
+          <div class="x-qs">
+            <article class="x-q" id="q1">
+              <p class="x-q__prog">Question 1 of 20</p>
+              <h3>Q1 · Prioritization: who do you see first?</h3>
+              <p>After receiving shift report, which client should the nurse assess <strong>first</strong>?</p>
+              <ol class="x-opts">
+                <li><b>A</b><span>Client with COPD whose SpO₂ is 89% on 2 L/min nasal cannula</span></li>
+                <li><b>B</b><span>Client 6 hours after a thyroidectomy who has a new high-pitched sound on inspiration</span></li>
+                <li><b>C</b><span>Client with type 2 diabetes whose pre-lunch glucose is 182 mg/dL</span></li>
+                <li><b>D</b><span>Client 2 days after an appendectomy who rates pain 5/10 and is due for an analgesic</span></li>
+              </ol>
+              <details class="x-reveal"><summary><span class="x-show">Show answer</span><span class="x-hide">Hide answer</span></summary>
+                <div class="x-ans">
+                  <p class="x-key"><b>Answer</b>B</p>
+                  <p><b>Rationale</b>Stridor after a thyroidectomy points to laryngeal edema, hematoma compressing the trachea, or laryngospasm (possibly from hypocalcemia). Any of these can block the airway within minutes. An SpO₂ of 88–92% is often the target in COPD. The glucose and the scheduled pain dose are real needs, but they are stable.</p>
+                  <p class="x-tip"><b>Test-taking tip</b>Look for the <strong>new</strong> and <strong>unexpected</strong> finding that threatens the airway. A finding that is expected for the diagnosis can wait.</p>
+                </div>
+              </details>
+            </article>
+
+            <article class="x-q" id="q2">
+              <p class="x-q__prog">Question 2 of 20</p>
+              <h3>Q2 · Delegation to assistive personnel</h3>
+              <p>The RN is working with unlicensed assistive personnel (UAP) on a medical-surgical unit. Which tasks are appropriate to delegate to the UAP?</p>
+              <p class="x-q__sata">Select all that apply</p>
+              <ol class="x-opts">
+                <li><b>A</b><span>Help a stable client who is 2 days post-op walk in the hallway</span></li>
+                <li><b>B</b><span>Take vital signs on a client whose condition has been stable all shift</span></li>
+                <li><b>C</b><span>Teach a newly diagnosed client how to draw up insulin</span></li>
+                <li><b>D</b><span>Check pain relief 30 minutes after IV morphine</span></li>
+                <li><b>E</b><span>Turn and reposition an immobile client every 2 hours</span></li>
+              </ol>
+              <details class="x-reveal"><summary><span class="x-show">Show answer</span><span class="x-hide">Hide answer</span></summary>
+                <div class="x-ans">
+                  <p class="x-key"><b>Answer</b>A, B, E</p>
+                  <p><b>Rationale</b>UAP can do routine, predictable tasks for stable clients with standard procedures, such as walking, vital signs, and repositioning. Teaching (C) and evaluating a client's response to a medication (D) require nursing judgment, so they stay with the RN.</p>
+                  <p class="x-tip"><b>Test-taking tip</b>Remember "<strong>EAT</strong>": RNs keep <strong>E</strong>valuate, <strong>A</strong>ssess, and <strong>T</strong>each. If the client is stable and the task is routine, it can be delegated.</p>
+                </div>
+              </details>
+            </article>
+
+            <article class="x-q" id="q3">
+              <p class="x-q__prog">Question 3 of 20</p>
+              <h3>Q3 · C. diff infection control</h3>
+              <p>A client has confirmed <em>Clostridioides difficile</em> infection. Which action by the assistive personnel requires the nurse to <strong>intervene</strong>?</p>
+              <ol class="x-opts">
+                <li><b>A</b><span>Putting on a gown and gloves before entering the room</span></li>
+                <li><b>B</b><span>Using a stethoscope that stays in the client's room</span></li>
+                <li><b>C</b><span>Using alcohol-based hand rub as the only hand hygiene after leaving the room</span></li>
+                <li><b>D</b><span>Cleaning the bedside commode with an EPA-registered sporicidal (bleach-based) disinfectant</span></li>
+              </ol>
+              <details class="x-reveal"><summary><span class="x-show">Show answer</span><span class="x-hide">Hide answer</span></summary>
+                <div class="x-ans">
+                  <p class="x-key"><b>Answer</b>C</p>
+                  <p><b>Rationale</b><em>C. diff</em> forms spores that alcohol does not kill. During C. diff care and outbreaks, CDC guidance calls for washing with soap and water, which physically removes the spores. Gown and gloves, dedicated equipment, and sporicidal cleaning are all correct contact-precaution practice.</p>
+                  <p class="x-tip"><b>Test-taking tip</b>"Requires intervention" means find the <strong>wrong</strong> action. For C. diff, link <strong>spores</strong> to <strong>soap and water</strong> and <strong>bleach</strong>.</p>
+                </div>
+              </details>
+            </article>
+
+            <article class="x-q" id="q4">
+              <p class="x-q__prog">Question 4 of 20</p>
+              <h3>Q4 · IV potassium chloride safety</h3>
+              <p>The nurse is preparing to give an IV potassium chloride infusion through a peripheral line. Which actions are appropriate?</p>
+              <p class="x-q__sata">Select all that apply</p>
+              <ol class="x-opts">
+                <li><b>A</b><span>Use an infusion pump</span></li>
+                <li><b>B</b><span>Confirm adequate urine output before starting</span></li>
+                <li><b>C</b><span>Give it as an IV push to correct the level faster</span></li>
+                <li><b>D</b><span>Check the IV site for pain, redness, or infiltration during the infusion</span></li>
+                <li><b>E</b><span>Add the potassium to the IV bag that is already hanging</span></li>
+              </ol>
+              <details class="x-reveal"><summary><span class="x-show">Show answer</span><span class="x-hide">Hide answer</span></summary>
+                <div class="x-ans">
+                  <p class="x-key"><b>Answer</b>A, B, D</p>
+                  <p><b>Rationale</b>IV potassium is a high-alert medication. It must be diluted and controlled with a pump, and it is never given as an IV push, which can cause fatal dysrhythmias or cardiac arrest. Potassium leaves the body through the kidneys, so check urine output first. It is irritating to veins, so watch the site. Never add potassium to a bag that is already hanging, because it can pool and deliver a concentrated dose.</p>
+                  <p class="x-tip"><b>Test-taking tip</b>Any potassium answer that says "<strong>push</strong>" is wrong. Think <strong>pump, pee, and site</strong>.</p>
+                </div>
+              </details>
+            </article>
+
+            <article class="x-q" id="q5">
+              <p class="x-q__prog">Question 5 of 20</p>
+              <h3>Q5 · NGN bowtie: DKA</h3>
+              <div class="x-q__case">
+                <p>A 22-year-old with type 1 diabetes has had 2 days of vomiting and has skipped insulin. Findings: deep, rapid respirations; fruity breath; HR 124; BP 98/60.</p>
+                <p>Labs: glucose 486 mg/dL, arterial pH 7.16, HCO₃⁻ 11 mEq/L, serum K⁺ 5.1 mEq/L, positive serum ketones.</p>
+              </div>
+              <p style="margin-top: 10px">Complete the diagram. Choose the condition the client is most likely experiencing, 2 actions the nurse should take, and 2 parameters to monitor.</p>
+              <p class="x-q__col">Condition most likely (choose 1)</p>
+              <ol class="x-opts x-opts--col">
+                <li><b>A</b><span>Diabetic ketoacidosis</span></li>
+                <li><b>B</b><span>Hyperosmolar hyperglycemic state</span></li>
+                <li><b>C</b><span>Hypoglycemia</span></li>
+                <li><b>D</b><span>Acute gastroenteritis</span></li>
+              </ol>
+              <p class="x-q__col">Actions to take (choose 2)</p>
+              <ol class="x-opts x-opts--col">
+                <li><b>1</b><span>Infuse an isotonic IV fluid bolus as prescribed</span></li>
+                <li><b>2</b><span>Start a continuous IV regular insulin infusion as prescribed</span></li>
+                <li><b>3</b><span>Give IV potassium chloride by IV push</span></li>
+                <li><b>4</b><span>Restrict oral and IV fluids</span></li>
+                <li><b>5</b><span>Give subcutaneous glargine as the only insulin</span></li>
+              </ol>
+              <p class="x-q__col">Parameters to monitor (choose 2)</p>
+              <ol class="x-opts">
+                <li><b>a</b><span>Hourly blood glucose</span></li>
+                <li><b>b</b><span>Serum potassium</span></li>
+                <li><b>c</b><span>Hemoglobin A1C</span></li>
+                <li><b>d</b><span>Urine specific gravity once daily</span></li>
+                <li><b>e</b><span>Weekly weight</span></li>
+              </ol>
+              <details class="x-reveal"><summary><span class="x-show">Show answer</span><span class="x-hide">Hide answer</span></summary>
+                <div class="x-ans">
+                  <p class="x-key"><b>Answer</b>Condition A (DKA) · Actions 1 and 2 · Parameters a and b</p>
+                  <p><b>Rationale</b>Glucose over 250, pH under 7.3, low bicarbonate, ketones, and Kussmaul breathing point to DKA. HHS usually has little or no ketoacidosis. Treatment starts with isotonic fluids and an IV insulin infusion. Under the 2024 ADA/EASD consensus, insulin is held only if K⁺ is below 3.5, so 5.1 is safe to start. Insulin moves potassium back into cells, so serum K⁺ can drop quickly. Monitor glucose hourly and potassium closely.</p>
+                  <p class="x-tip"><b>Test-taking tip</b>In DKA the first potassium value is often normal or high, but <strong>insulin drives it down</strong>. Potassium is always a parameter to monitor.</p>
+                </div>
+              </details>
+            </article>
+
+            <article class="x-q" id="q6">
+              <p class="x-q__prog">Question 6 of 20</p>
+              <h3>Q6 · Alendronate teaching</h3>
+              <p>The nurse teaches a client who was just prescribed oral alendronate once weekly. Which statement shows the client <strong>needs more teaching</strong>?</p>
+              <ol class="x-opts">
+                <li><b>A</b><span>"I'll take it first thing in the morning before I eat."</span></li>
+                <li><b>B</b><span>"I'll swallow it with a full glass of plain water."</span></li>
+                <li><b>C</b><span>"I'll stay sitting up or standing for at least 30 minutes afterward."</span></li>
+                <li><b>D</b><span>"I'll take it with my morning coffee so I don't forget."</span></li>
+              </ol>
+              <details class="x-reveal"><summary><span class="x-show">Show answer</span><span class="x-hide">Hide answer</span></summary>
+                <div class="x-ans">
+                  <p class="x-key"><b>Answer</b>D</p>
+                  <p><b>Rationale</b>Food, coffee, juice, and calcium sharply reduce alendronate absorption. Take it only with plain water on an empty stomach, at least 30 minutes before food, drinks, or other medicines. Staying upright for 30 minutes lowers the risk of esophageal irritation and ulceration.</p>
+                  <p class="x-tip"><b>Test-taking tip</b>"Needs more teaching" means find the <strong>incorrect</strong> statement. For bisphosphonates, remember <strong>plain water, empty stomach, upright 30</strong>.</p>
+                </div>
+              </details>
+            </article>
+
+            <article class="x-q" id="q7">
+              <p class="x-q__prog">Question 7 of 20</p>
+              <h3>Q7 · NGN matrix: after cardiac catheterization</h3>
+              <div class="x-q__case">
+                <p>A 64-year-old client had a cardiac catheterization through the <strong>right femoral artery</strong> 3 hours ago. The client is on bed rest with the right leg straight.</p>
+                <p>Nurse's note at 1400: BP 116/70 (baseline 122/76); HR 112 (was 80 at 1200); new low back pain, 6/10; dressing dry with a small bruise at the site; right pedal pulse weak compared with left; right foot cool; voided 350 mL of clear yellow urine.</p>
+              </div>
+              <p style="margin-top: 10px">For each finding, mark whether it is <strong>expected</strong> or <strong>requires follow-up</strong>.</p>
+              <table class="x-matrix">
+                <thead><tr><th scope="col">Finding</th><th scope="col">Expected</th><th scope="col">Follow-up</th></tr></thead>
+                <tbody>
+                  <tr><td>HR 112, up from 80</td><td>○</td><td>○</td></tr>
+                  <tr><td>New low back pain, 6/10</td><td>○</td><td>○</td></tr>
+                  <tr><td>Small bruise at the site, dressing dry</td><td>○</td><td>○</td></tr>
+                  <tr><td>Right pedal pulse weak compared with left; right foot cool</td><td>○</td><td>○</td></tr>
+                  <tr><td>Voided 350 mL of clear yellow urine</td><td>○</td><td>○</td></tr>
+                </tbody>
+              </table>
+              <details class="x-reveal"><summary><span class="x-show">Show answer</span><span class="x-hide">Hide answer</span></summary>
+                <div class="x-ans">
+                  <p class="x-key"><b>Answer</b>Follow-up: HR 112, back pain, weak/cool right foot. Expected: small bruise, urine output.</p>
+                  <p><b>Rationale</b>New back or flank pain with a climbing heart rate after femoral access is a warning sign of retroperitoneal bleeding, even when the dressing is dry. A weak pulse and cool foot on the affected leg suggest arterial occlusion or thrombus and need immediate reporting. A small bruise and good urine output (which also helps clear contrast dye) are expected.</p>
+                  <p class="x-tip"><b>Test-taking tip</b>Compare against the <strong>baseline</strong> and the <strong>other side</strong>. A trend (80 → 112) or an asymmetry (right vs. left pulse) is a cue.</p>
+                </div>
+              </details>
+            </article>
+
+            <article class="x-q" id="q8">
+              <p class="x-q__prog">Question 8 of 20</p>
+              <h3>Q8 · Postpartum fundus</h3>
+              <p>On postpartum day 1 after a vaginal birth, the nurse finds the fundus <strong>firm</strong>, 2 cm above the umbilicus, and <strong>deviated to the right</strong>. Lochia is moderate rubra. What should the nurse do <strong>first</strong>?</p>
+              <ol class="x-opts">
+                <li><b>A</b><span>Massage the fundus until it is firm</span></li>
+                <li><b>B</b><span>Help the client empty her bladder</span></li>
+                <li><b>C</b><span>Notify the provider about possible hemorrhage</span></li>
+                <li><b>D</b><span>Give the prescribed oxytocin</span></li>
+              </ol>
+              <details class="x-reveal"><summary><span class="x-show">Show answer</span><span class="x-hide">Hide answer</span></summary>
+                <div class="x-ans">
+                  <p class="x-key"><b>Answer</b>B</p>
+                  <p><b>Rationale</b>A firm fundus that is high and pushed to one side usually means a full bladder. A full bladder keeps the uterus from contracting well and raises the risk of bleeding. Massage and uterotonics are for a <strong>boggy</strong> fundus. Moderate rubra lochia is expected on day 1.</p>
+                  <p class="x-tip"><b>Test-taking tip</b><strong>Boggy</strong> fundus → massage. <strong>Firm but high and off to the side</strong> → have her void.</p>
+                </div>
+              </details>
+            </article>
+
+            <article class="x-q" id="q9">
+              <p class="x-q__prog">Question 9 of 20</p>
+              <h3>Q9 · Alcohol withdrawal</h3>
+              <p>A client admitted for a hip fracture reports drinking about a fifth of vodka daily. The last drink was 24 hours ago. Which findings would the nurse expect if the client is in alcohol withdrawal?</p>
+              <p class="x-q__sata">Select all that apply</p>
+              <ol class="x-opts">
+                <li><b>A</b><span>Hand tremors</span></li>
+                <li><b>B</b><span>Diaphoresis</span></li>
+                <li><b>C</b><span>Heart rate 118</span></li>
+                <li><b>D</b><span>Pinpoint pupils</span></li>
+                <li><b>E</b><span>BP 90/56</span></li>
+              </ol>
+              <details class="x-reveal"><summary><span class="x-show">Show answer</span><span class="x-hide">Hide answer</span></summary>
+                <div class="x-ans">
+                  <p class="x-key"><b>Answer</b>A, B, C</p>
+                  <p><b>Rationale</b>Alcohol withdrawal causes autonomic hyperactivity, usually starting 6–24 hours after the last drink. Expect tremors, sweating, tachycardia, high blood pressure, anxiety, and dilated pupils. Pinpoint pupils suggest opioid toxicity. Low blood pressure is not typical of withdrawal and calls for a look at other causes, such as bleeding from the fracture.</p>
+                  <p class="x-tip"><b>Test-taking tip</b>Withdrawal <strong>from a depressant</strong> = everything <strong>speeds up</strong>. Expect "up" vital signs, not "down."</p>
+                </div>
+              </details>
+            </article>
+
+            <article class="x-q" id="q10">
+              <p class="x-q__prog">Question 10 of 20</p>
+              <h3>Q10 · Enteral feeding and aspiration</h3>
+              <p>A client is receiving a continuous enteral feeding through a nasogastric tube. Which action best reduces the risk of aspiration?</p>
+              <ol class="x-opts">
+                <li><b>A</b><span>Keep the head of the bed raised at least 30 degrees</span></li>
+                <li><b>B</b><span>Lay the client flat for bed baths with the feeding still running</span></li>
+                <li><b>C</b><span>Confirm tube placement only at the time of insertion</span></li>
+                <li><b>D</b><span>Raise the infusion rate to finish the feeding sooner</span></li>
+              </ol>
+              <details class="x-reveal"><summary><span class="x-show">Show answer</span><span class="x-hide">Hide answer</span></summary>
+                <div class="x-ans">
+                  <p class="x-key"><b>Answer</b>A</p>
+                  <p><b>Rationale</b>Keeping the head of the bed at 30–45 degrees during feeding (and for a while after intermittent feeds) is a key evidence-based measure for preventing aspiration. Placement should be confirmed after insertion with an X-ray and checked again on an ongoing basis, such as by external tube marking and before use. Lying flat with the feeding running, or raising the rate, increases aspiration risk.</p>
+                  <p class="x-tip"><b>Test-taking tip</b>With <strong>any</strong> tube feeding question, look for <strong>head of bed at 30 degrees or higher</strong> first.</p>
+                </div>
+              </details>
+            </article>
+
+            <article class="x-q" id="q11">
+              <p class="x-q__prog">Question 11 of 20</p>
+              <h3>Q11 · Prioritization: who do you see first?</h3>
+              <p>The nurse returns from a break to four call lights. Which client should the nurse see <strong>first</strong>?</p>
+              <ol class="x-opts">
+                <li><b>A</b><span>Client with a chest tube for a pneumothorax, with intermittent bubbling in the water-seal chamber when the client coughs</span></li>
+                <li><b>B</b><span>Client 15 minutes into a packed red blood cell transfusion who reports chills and new low back pain</span></li>
+                <li><b>C</b><span>Client with heart failure whose weight is up 0.5 kg (1 lb) since yesterday</span></li>
+                <li><b>D</b><span>Client 1 day after a total knee replacement who rates pain 4/10 and asks when physical therapy will come</span></li>
+              </ol>
+              <details class="x-reveal"><summary><span class="x-show">Show answer</span><span class="x-hide">Hide answer</span></summary>
+                <div class="x-ans">
+                  <p class="x-key"><b>Answer</b>B</p>
+                  <p><b>Rationale</b>Chills and low back pain early in a transfusion are signs of an acute hemolytic reaction, which can progress to shock, kidney injury, and DIC. The nurse stops the transfusion, keeps the IV line open with normal saline using new tubing, and notifies the provider and blood bank. Intermittent bubbling in the water-seal chamber with coughing is expected while air is still leaving the pleural space after a pneumothorax. A 0.5 kg gain is below the usual heart failure reporting threshold of about 1–1.5 kg (2–3 lb) in a day. Pain of 4/10 on day 1 after knee surgery is a stable, expected need.</p>
+                  <p class="x-tip"><b>Test-taking tip</b>Most transfusion reactions happen in the <strong>first 15 minutes</strong>. Any new symptom during that window wins the priority question.</p>
+                </div>
+              </details>
+            </article>
+
+            <article class="x-q" id="q12">
+              <p class="x-q__prog">Question 12 of 20</p>
+              <h3>Q12 · Informed consent</h3>
+              <p>A client scheduled for a laparoscopic cholecystectomy received IV midazolam 20 minutes ago as a preoperative medication. The nurse finds that the surgical consent form has <strong>not</strong> been signed. What is the nurse's <strong>best</strong> action?</p>
+              <ol class="x-opts">
+                <li><b>A</b><span>Have the client sign the form now, since the client is still awake and answering questions</span></li>
+                <li><b>B</b><span>Ask the client's spouse in the waiting room to sign the form</span></li>
+                <li><b>C</b><span>Notify the surgeon that consent was not obtained before the sedative was given</span></li>
+                <li><b>D</b><span>Explain the procedure and risks, then witness the client's signature</span></li>
+              </ol>
+              <details class="x-reveal"><summary><span class="x-show">Show answer</span><span class="x-hide">Hide answer</span></summary>
+                <div class="x-ans">
+                  <p class="x-key"><b>Answer</b>C</p>
+                  <p><b>Rationale</b>Informed consent must be given by a competent client who is not under the influence of mind-altering medication. Once a sedative has been given, a signature is not valid even if the client seems alert. Getting informed consent (explaining the procedure, risks, benefits, and alternatives) is the surgeon's responsibility. The nurse's role is to confirm the client understands and to witness the signature. A spouse can't sign just because it's convenient. A surrogate signs only when the client lacks capacity and policy allows it, and the surgeon decides how to proceed.</p>
+                  <p class="x-tip"><b>Test-taking tip</b>In consent questions the nurse <strong>witnesses</strong> and <strong>advocates</strong>. The provider <strong>explains</strong> and <strong>obtains</strong>. If something is wrong with the consent, the answer usually involves notifying the provider.</p>
+                </div>
+              </details>
+            </article>
+
+            <article class="x-q" id="q13">
+              <p class="x-q__prog">Question 13 of 20</p>
+              <h3>Q13 · Airborne precautions for tuberculosis</h3>
+              <p>A client is admitted with a 3-week productive cough, night sweats, and weight loss, and pulmonary tuberculosis is suspected. Which actions should the nurse take?</p>
+              <p class="x-q__sata">Select all that apply</p>
+              <ol class="x-opts">
+                <li><b>A</b><span>Place the client in an airborne infection isolation room (negative pressure)</span></li>
+                <li><b>B</b><span>Wear a fit-tested N95 respirator when entering the room</span></li>
+                <li><b>C</b><span>Keep the room door open so the client can be watched from the hallway</span></li>
+                <li><b>D</b><span>Have the client wear a surgical mask if transport out of the room is needed</span></li>
+                <li><b>E</b><span>Wear a standard surgical mask when entering the room instead of a respirator</span></li>
+              </ol>
+              <details class="x-reveal"><summary><span class="x-show">Show answer</span><span class="x-hide">Hide answer</span></summary>
+                <div class="x-ans">
+                  <p class="x-key"><b>Answer</b>A, B, D</p>
+                  <p><b>Rationale</b>TB spreads through tiny airborne droplet nuclei that stay suspended in the air and travel on air currents. Negative pressure pulls air into the room and exhausts it safely, and keeping the door closed keeps that pressure working. Staff need a fit-tested N95 (or higher) respirator, because a surgical mask doesn't filter particles this small or seal to the face. When the client must leave the room, a surgical mask on the client contains droplets at the source.</p>
+                  <p class="x-tip"><b>Test-taking tip</b>Remember <strong>"My Chicken Hez TB"</strong>: <strong>M</strong>easles, <strong>C</strong>hickenpox (varicella), <strong>H</strong>erpes <strong>z</strong>oster (disseminated), and <strong>TB</strong> need airborne precautions. Airborne means <strong>negative pressure, door closed, N95 on staff, surgical mask on the client for transport</strong>.</p>
+                </div>
+              </details>
+            </article>
+
+            <article class="x-q" id="q14">
+              <p class="x-q__prog">Question 14 of 20</p>
+              <h3>Q14 · Infant growth and development</h3>
+              <p>The nurse is assessing a healthy 9-month-old at a well-child visit. Which finding should the nurse <strong>report</strong> to the provider for follow-up?</p>
+              <ol class="x-opts">
+                <li><b>A</b><span>The infant sits steadily without support</span></li>
+                <li><b>B</b><span>A full Moro (startle) reflex when the infant hears a loud noise</span></li>
+                <li><b>C</b><span>The infant cries and clings to the parent when the nurse approaches</span></li>
+                <li><b>D</b><span>The infant picks up a small piece of cereal with the thumb and finger</span></li>
+              </ol>
+              <details class="x-reveal"><summary><span class="x-show">Show answer</span><span class="x-hide">Hide answer</span></summary>
+                <div class="x-ans">
+                  <p class="x-key"><b>Answer</b>B</p>
+                  <p><b>Rationale</b>The Moro reflex normally fades by about 4–6 months as the brain matures. A Moro reflex that persists at 9 months can signal a neurologic problem and needs evaluation. Sitting without support (usually by about 6–8 months), stranger anxiety (begins around 6–8 months), and an emerging pincer grasp (around 9–10 months) are all expected at this age.</p>
+                  <p class="x-tip"><b>Test-taking tip</b>Primitive reflexes are expected <strong>early</strong> and a problem when they <strong>stay</strong>. For any "which needs follow-up" milestone question, look for the reflex or skill that is <strong>behind schedule</strong>, not the one that seems unusual for an adult.</p>
+                </div>
+              </details>
+            </article>
+
+            <article class="x-q" id="q15">
+              <p class="x-q__prog">Question 15 of 20</p>
+              <h3>Q15 · Suicide risk in depression</h3>
+              <p>A client admitted with major depressive disorder started an SSRI 2 weeks ago. Today the client is suddenly cheerful and calm and tells the nurse, "I gave my guitar to my roommate. I won't need it anymore." What is the nurse's <strong>priority</strong> response?</p>
+              <ol class="x-opts">
+                <li><b>A</b><span>"You seem to be feeling much better today. That's great progress."</span></li>
+                <li><b>B</b><span>"Are you thinking about killing yourself?"</span></li>
+                <li><b>C</b><span>"Let's get you to group therapy so you can share how well you're doing."</span></li>
+                <li><b>D</b><span>"You shouldn't give your things away. You'll want them when you go home."</span></li>
+              </ol>
+              <details class="x-reveal"><summary><span class="x-show">Show answer</span><span class="x-hide">Hide answer</span></summary>
+                <div class="x-ans">
+                  <p class="x-key"><b>Answer</b>B</p>
+                  <p><b>Rationale</b>A sudden lift in mood, a sense of calm, and giving away valued possessions can mean the client has decided on a suicide plan. Risk also rises in the first weeks of antidepressant therapy, because energy often returns before mood does. Asking directly and clearly about suicide does not plant the idea. It opens the door to an honest answer and is the first step in assessing risk. The other responses praise, redirect, or lecture, and none of them assesses safety.</p>
+                  <p class="x-tip"><b>Test-taking tip</b>When a cue suggests suicide risk, <strong>assess first, and ask directly</strong>. Choose the answer that uses the word "suicide" or "killing yourself" over vague or reassuring ones.</p>
+                </div>
+              </details>
+            </article>
+
+            <article class="x-q" id="q16">
+              <p class="x-q__prog">Question 16 of 20</p>
+              <h3>Q16 · Celiac disease diet</h3>
+              <p>The nurse is teaching a client newly diagnosed with celiac disease. Which foods are safe for the client to include in the diet?</p>
+              <p class="x-q__sata">Select all that apply</p>
+              <ol class="x-opts">
+                <li><b>A</b><span>Brown rice</span></li>
+                <li><b>B</b><span>Barley soup</span></li>
+                <li><b>C</b><span>Corn tortillas</span></li>
+                <li><b>D</b><span>Rye crackers</span></li>
+                <li><b>E</b><span>Quinoa</span></li>
+              </ol>
+              <details class="x-reveal"><summary><span class="x-show">Show answer</span><span class="x-hide">Hide answer</span></summary>
+                <div class="x-ans">
+                  <p class="x-key"><b>Answer</b>A, C, E</p>
+                  <p><b>Rationale</b>In celiac disease, gluten triggers an immune reaction that damages the small-intestine villi and causes malabsorption. The treatment is a lifelong gluten-free diet. Wheat, barley, and rye contain gluten. Rice, corn, and quinoa are naturally gluten-free. Teach the client to read labels, because packaged versions of these foods can be processed alongside gluten grains.</p>
+                  <p class="x-tip"><b>Test-taking tip</b>Classic memory hook: <strong>BROW</strong> (<strong>B</strong>arley, <strong>R</strong>ye, <strong>O</strong>ats, <strong>W</strong>heat). Oats are often listed because they're commonly cross-contaminated. If it isn't on that list, like <strong>rice, corn, or quinoa</strong>, it's usually safe.</p>
+                </div>
+              </details>
+            </article>
+
+            <article class="x-q" id="q17">
+              <p class="x-q__prog">Question 17 of 20</p>
+              <h3>Q17 · Lithium toxicity</h3>
+              <p>A client with bipolar disorder takes lithium carbonate. The client reports 2 days of vomiting and diarrhea, and the nurse notes a <strong>coarse</strong> hand tremor and slurred speech. The serum lithium level is 1.9 mEq/L. What should the nurse do <strong>first</strong>?</p>
+              <ol class="x-opts">
+                <li><b>A</b><span>Give the next lithium dose with food to reduce stomach upset</span></li>
+                <li><b>B</b><span>Hold the next dose and notify the provider</span></li>
+                <li><b>C</b><span>Teach the client to cut back on salt to stop the diarrhea</span></li>
+                <li><b>D</b><span>Reassure the client that tremor is an expected side effect of lithium</span></li>
+              </ol>
+              <details class="x-reveal"><summary><span class="x-show">Show answer</span><span class="x-hide">Hide answer</span></summary>
+                <div class="x-ans">
+                  <p class="x-key"><b>Answer</b>B</p>
+                  <p><b>Rationale</b>Lithium has a narrow therapeutic range (commonly about 0.6–1.2 mEq/L for maintenance), and levels above about 1.5 mEq/L are toxic. Vomiting and diarrhea cause sodium and fluid loss, and the kidneys then hold on to lithium along with sodium, which pushes the level up. Coarse tremor, slurred speech, and ongoing GI symptoms are signs of toxicity. The nurse holds the drug and notifies the provider. A <strong>fine</strong> hand tremor can be an expected side effect, but a <strong>coarse</strong> tremor is not. Cutting salt would raise the lithium level further.</p>
+                  <p class="x-tip"><b>Test-taking tip</b>With lithium, <strong>fine tremor = side effect, coarse tremor = toxicity</strong>. Anything that lowers sodium or fluid (vomiting, diarrhea, sweating, low-salt diet, diuretics) raises the lithium level.</p>
+                </div>
+              </details>
+            </article>
+
+            <article class="x-q" id="q18">
+              <p class="x-q__prog">Question 18 of 20</p>
+              <h3>Q18 · ABG interpretation</h3>
+              <p>A client has had persistent vomiting for 3 days. Arterial blood gas results: pH 7.51, PaCO₂ 48 mm Hg, HCO₃⁻ 34 mEq/L. How should the nurse interpret these results?</p>
+              <ol class="x-opts">
+                <li><b>A</b><span>Respiratory acidosis</span></li>
+                <li><b>B</b><span>Uncompensated metabolic alkalosis</span></li>
+                <li><b>C</b><span>Partially compensated metabolic alkalosis</span></li>
+                <li><b>D</b><span>Fully compensated respiratory alkalosis</span></li>
+              </ol>
+              <details class="x-reveal"><summary><span class="x-show">Show answer</span><span class="x-hide">Hide answer</span></summary>
+                <div class="x-ans">
+                  <p class="x-key"><b>Answer</b>C</p>
+                  <p><b>Rationale</b>Normal values: pH 7.35–7.45, PaCO₂ 35–45 mm Hg, HCO₃⁻ 22–26 mEq/L. A pH of 7.51 is alkalosis. The HCO₃⁻ of 34 is high and matches the alkalosis, so the cause is metabolic, which fits vomiting (loss of stomach acid). The PaCO₂ of 48 is also abnormal, in the acid direction: the lungs are slowing breathing to hold on to CO₂ and pull the pH back down. Compensation has started, but the pH is still outside normal, so this is <strong>partially</strong> compensated. If PaCO₂ were normal, it would be uncompensated. If the pH were back in the normal range, it would be fully compensated.</p>
+                  <p class="x-tip"><b>Test-taking tip</b>Use three steps: <strong>(1) pH</strong>: acid or base? <strong>(2) Which value matches the pH?</strong> That's the cause (ROME: <strong>R</strong>espiratory <strong>O</strong>pposite, <strong>M</strong>etabolic <strong>E</strong>qual). <strong>(3) Is the other value abnormal?</strong> No = uncompensated. Yes and pH abnormal = partial. Yes and pH normal = full.</p>
+                </div>
+              </details>
+            </article>
+
+            <article class="x-q" id="q19">
+              <p class="x-q__prog">Question 19 of 20</p>
+              <h3>Q19 · NGN matrix: preeclampsia with severe features</h3>
+              <div class="x-q__case">
+                <p>A 26-year-old G1P0 at 33 weeks' gestation comes to labor and delivery with a headache that has not improved with acetaminophen.</p>
+                <p>Nurse's note at 0930: BP 164/112; repeat BP 15 minutes later 166/110. Reports "seeing spots" and pain under the right ribs and in the upper middle abdomen. 2+ pitting edema of both feet. Urine dipstick protein 2+. Platelets 92,000/mm³. Fetal heart rate 140 with moderate variability.</p>
+              </div>
+              <p style="margin-top: 10px">For each finding, mark whether it is a <strong>severe feature</strong> of preeclampsia or <strong>not a severe feature</strong>.</p>
+              <table class="x-matrix">
+                <thead><tr><th scope="col">Finding</th><th scope="col">Severe</th><th scope="col">Not severe</th></tr></thead>
+                <tbody>
+                  <tr><td>BP 164/112, confirmed on repeat 166/110</td><td>○</td><td>○</td></tr>
+                  <tr><td>Headache not relieved by acetaminophen</td><td>○</td><td>○</td></tr>
+                  <tr><td>Seeing spots</td><td>○</td><td>○</td></tr>
+                  <tr><td>Right upper quadrant and epigastric pain</td><td>○</td><td>○</td></tr>
+                  <tr><td>Platelets 92,000/mm³</td><td>○</td><td>○</td></tr>
+                  <tr><td>Urine protein 2+</td><td>○</td><td>○</td></tr>
+                  <tr><td>2+ pitting edema of both feet</td><td>○</td><td>○</td></tr>
+                </tbody>
+              </table>
+              <details class="x-reveal"><summary><span class="x-show">Show answer</span><span class="x-hide">Hide answer</span></summary>
+                <div class="x-ans">
+                  <p class="x-key"><b>Answer</b>Severe features: BP, headache, visual changes, RUQ/epigastric pain, platelets. Not severe features: proteinuria, pedal edema.</p>
+                  <p><b>Rationale</b>Preeclampsia is widespread blood vessel dysfunction with vasospasm, and severe features show that organs are being affected. Under current ACOG criteria, severe features include systolic BP 160 or higher or diastolic 110 or higher on repeat measurement, new headache that doesn't respond to medication, visual disturbances, severe persistent right upper quadrant or epigastric pain (from liver swelling or injury), platelets below 100,000/mm³, raised liver enzymes, kidney dysfunction, and pulmonary edema. Proteinuria helps <strong>diagnose</strong> preeclampsia, but the amount no longer defines severity. Edema is common in normal pregnancy and isn't a diagnostic criterion. This client needs urgent treatment, typically magnesium sulfate for seizure prevention and fast-acting antihypertensives as prescribed.</p>
+                  <p class="x-tip"><b>Test-taking tip</b>Ask, "Does this show an <strong>organ</strong> under attack?" <strong>Brain</strong> (headache, vision), <strong>liver</strong> (RUQ/epigastric pain), <strong>blood</strong> (low platelets), and <strong>vessels</strong> (BP 160/110) count. Protein and swelling don't measure severity.</p>
+                </div>
+              </details>
+            </article>
+
+            <article class="x-q" id="q20">
+              <p class="x-q__prog">Question 20 of 20</p>
+              <h3>Q20 · Autonomic dysreflexia</h3>
+              <p>A client with a complete T4 spinal cord injury suddenly reports a pounding headache. The nurse finds BP 198/110, HR 52, flushed and sweaty skin above the level of injury, and nasal stuffiness. What should the nurse do <strong>first</strong>?</p>
+              <ol class="x-opts">
+                <li><b>A</b><span>Raise the head of the bed and sit the client upright</span></li>
+                <li><b>B</b><span>Check the urinary catheter for kinks</span></li>
+                <li><b>C</b><span>Give the prescribed antihypertensive</span></li>
+                <li><b>D</b><span>Place the client flat with the legs raised</span></li>
+              </ol>
+              <details class="x-reveal"><summary><span class="x-show">Show answer</span><span class="x-hide">Hide answer</span></summary>
+                <div class="x-ans">
+                  <p class="x-key"><b>Answer</b>A</p>
+                  <p><b>Rationale</b>Autonomic dysreflexia happens in injuries at T6 or above. A stimulus below the injury, most often a full bladder or a kinked catheter, then constipation or skin pressure, sets off a large sympathetic response the brain can't regulate. Vessels below the injury constrict and BP soars, which can cause a stroke or seizure. Sitting the client upright, with legs lowered if possible, pools blood in the lower body and lowers BP right away. Next, loosen tight clothing and find and remove the trigger, starting with the bladder. Medication is used if BP stays high after the cause is removed. Lying flat with legs raised would push BP even higher.</p>
+                  <p class="x-tip"><b>Test-taking tip</b>For autonomic dysreflexia, <strong>sit up first, then search</strong> (bladder → bowel → skin). If an answer finds the cause but leaves the client flat, it's the right action at the wrong time.</p>
+                </div>
+              </details>
+            </article>
+          </div>
+          <p class="x-set__fine">Educational practice only. Not actual NCLEX items.</p>
         </section>
 
         <section class="x-block" aria-labelledby="follow">
